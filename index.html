@@ -13,6 +13,32 @@
 	<link href="css/sb-admin.css" rel="stylesheet">
 	<link href="css/plugins/morris.css" rel="stylesheet">
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<style>
+		.slide.ng-leave {
+			position: relative;
+		}
+		.slide.ng-enter {
+			position: absolute;
+		}
+		.slide.ng-enter, .slide.ng-leave {
+			-webkit-transition: -webkit-transform 0.3s ease-in, opacity 0.3s ease-in;
+			-moz-transition: -moz-transform 0.3s ease-in, opacity 0.3s ease-in;
+			-o-transition: -o-transform 0.3s ease-in, opacity 0.3s ease-in;
+			transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+		}
+		.slide.ng-enter, .slide.ng-leave.ng-leave-active {
+			-webkit-transform: scaleX(0.0001);
+			-o-transform: scaleX(0.0001);
+			transform: scaleX(0.0001);
+			opacity: 0;
+		}
+		.slide, .slide.ng-enter.ng-enter-active {
+			-webkit-transform: scaleX(1);
+			-o-transform: scaleX(1);
+			transform: scaleX(1);
+			opacity: 1;
+		}
+	</style>
 </head>
 
 <body>
@@ -175,7 +201,7 @@
 			<!-- /.navbar-collapse -->
 		</nav>
 
-		<div ui-view  id="page-wrapper">
+		<div ui-view  id="page-wrapper" class="container slide">
 
 		</div>
 		
@@ -188,6 +214,7 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-ui-router.js"></script>
 	<script src="js/ocLazyLoad.js"></script>
+	<script src="js/angular-animate.min.js"></script>
 	<!-- jQuery -->
 	
 

@@ -1,4 +1,4 @@
-var app=angular.module('app.module', ['ui.router','oc.lazyLoad']);
+var app=angular.module('app.module', ['ui.router','oc.lazyLoad','ngAnimate']);
 app.config(function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.otherwise("/");
 	

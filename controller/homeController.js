@@ -1,11 +1,4 @@
-var app=angular.module("home.module",["oc.lazyLoad"]);
-app.config(['$ocLazyLoadProvider', function($ocLazyLoadProvider) {
-	$ocLazyLoadProvider.config({
-		debug:true,
-		events: true
-	});
-}]);
-
+var app=angular.module("home.module",[]);
 app.controller("homeController",["$scope","$ocLazyLoad"
 	,function($scope,$ocLazyLoad){
 		$ocLazyLoad.load({
